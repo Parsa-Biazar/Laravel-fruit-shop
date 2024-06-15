@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: yekan;
+    src: url('../admin-assets/fonts/yekan.eot');
+    src: url('../admin-assets/fonts/yekan.eot') format('FontName-opentype'),
+    url('../admin-assets/fonts/yekan.woff') format('woff'),
+    url('../admin-assets/fonts/yekan.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: samim;
+    src: url('../admin-assets/fonts/samim.eot');
+    src: url('../admin-assets/fonts/samim.eot') format('FontName-opentype'),
+    url('../admin-assets/fonts/samim.woff') format('woff'),
+    url('../admin-assets/fonts/samim.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: samim_bold;
+    src: url('../admin-assets/fonts/samim-bold.eot');
+    src: url('../admin-assets/fonts/samim-bold.eot') format('FontName-opentype'),
+    url('../admin-assets/fonts/samim-bold.woff') format('woff'),
+    url('../admin-assets/fonts/samim-bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family:samim.tff;
+    src: url('../admin-assets/fonts/samim.ttf');
+}
+body,html{
+    /*direction: rtl;*/
+    font-family: samim,yekan;
+!important;}
+
+
+
+
+.uncopyable {
+    user-select: none;
+}

@@ -1,0 +1,62 @@
+
+.product-img {
+    --g: 4px;     /* the gap */
+    --b: 12px;    /* border thickness*/
+    --c: #f3a95f; /* the color */
+
+
+    padding: calc(var(--g) + var(--b));
+    --_c: #0000 0 25%, var(--c) 0 50%;
+    --_g1: repeating-linear-gradient(90deg ,var(--_c)) repeat-x;
+    --_g2: repeating-linear-gradient(180deg,var(--_c)) repeat-y;
+    background:
+      var(--_g1) var(--_p, 25%) 0   ,var(--_g2) 0    var(--_p,125%),
+      var(--_g1) var(--_p,125%) 100%,var(--_g2) 100% var(--_p, 25%);
+    background-size: 200% var(--b),var(--b) 200%;
+    cursor: pointer;
+    filter: grayscale(50%);
+    transition: .3s;
+  }
+  img:hover {
+    --_p: 75%;
+    filter: grayscale(0%);
+  }
+  .cat-h1 {
+    --b: 0.1em;   /* the thickness of the line */
+    --c: #fdd424; /* the color */
+    color: #0000;
+    padding-block: var(--b);
+    background:
+      linear-gradient(var(--c) 50%,#000 0) 0% calc(100% - var(--_p,0%))/100% 200%,
+      linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
+    -webkit-background-clip: text,padding-box;
+            background-clip: text,padding-box;
+    transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
+  }
+  .cat-h1:hover {
+    --_p: 100%;
+    --_s: .3s;
+  }
+
+
+
+
+
+
+  .footer-mid-img {
+    --m:
+      radial-gradient(circle farthest-side at right,#000 99%,#0000)
+        0 100%/46% 92% no-repeat,
+      radial-gradient(circle farthest-side at left ,#000 99%,#0000)
+        100% 0/46% 92% no-repeat;
+    -webkit-mask: var(--m);
+            mask: var(--m);
+    filter: grayscale(.5);
+    transition: .3s linear;
+    cursor: default;
+  }
+  .footer-mid-img:hover {
+    -webkit-mask-position: 7.5% 50%,92.5% 50%;
+            mask-position: 7.5% 50%,92.5% 50%;
+    filter: grayscale(0);
+  }
